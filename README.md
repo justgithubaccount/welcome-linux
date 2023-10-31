@@ -1,0 +1,3 @@
+- [Основы GNU/Linux и подготовка к RHCSA](https://basis.gnulinux.pro/ru/latest/index.html)
+- [Set up a WSL development environment](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
+- [Sample sudo configuration file](https://www.ibm.com/docs/en/fsmmn?topic=systems-sample-sudo-configuration-file)
