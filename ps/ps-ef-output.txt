@@ -1,0 +1,27 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 05:53 ?        00:00:00 /init
+root         4     1  0 05:53 ?        00:00:00 plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-truncate
+root       321     1  0 05:57 ?        00:00:00 /init
+root       322   321  0 05:57 ?        00:00:00 /init
+root       323   322  0 05:57 pts/0    00:00:00 /mnt/wsl/docker-desktop/docker-desktop-user-distro proxy --distro-name Debian --docker-desktop-root /mnt/wsl/docker-desktop C:\Program Files\Docker\Docker\resources
+root       338   321  0 05:57 ?        00:00:00 /init
+windows    339   338  0 05:57 pts/1    00:00:01 docker serve --address unix:///home/windows/.docker/run/docker-cli-api.sock
+root       989     1  0 10:12 ?        00:00:00 /init
+root       990   989  0 10:12 ?        00:00:00 /init
+windows    991   990  0 10:12 pts/2    00:00:00 sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" f1b07bd25dfad64b0167beb15359ae573aecd2cc stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=1959040361-1243358079-36556871-1961482057 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+windows    992   991  0 10:12 pts/2    00:00:00 sh /mnt/c/Users/anonymous/.vscode/extensions/ms-vscode-remote.remote-wsl-0.81.8/scripts/wslServer.sh f1b07bd25dfad64b0167beb15359ae573aecd2cc stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=1959040361-1243358079-36556871-1961482057 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+windows    997   992  0 10:12 pts/2    00:00:00 sh /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/bin/code-server --host=127.0.0.1 --port=0 --connection-token=1959040361-1243358079-36556871-1961482057 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+windows   1001   997  1 10:12 pts/2    00:00:13 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=1959040361-1243358079-36556871-1961482057 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+root      1060     1  0 10:13 ?        00:00:00 /init
+root      1061  1060  0 10:13 ?        00:00:00 /init
+windows   1062  1061  0 10:13 pts/3    00:00:01 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 45295 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+root      1069     1  0 10:13 ?        00:00:00 /init
+root      1070  1069  0 10:13 ?        00:00:00 /init
+windows   1071  1070  0 10:13 pts/4    00:00:01 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 45295 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+windows   1078  1001  4 10:13 pts/2    00:00:35 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node --dns-result-order=ipv4first /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+windows   1130  1001  0 10:13 pts/2    00:00:00 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/out/bootstrap-fork --type=fileWatcher
+windows   1164  1001  0 10:13 pts/2    00:00:04 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/out/bootstrap-fork --type=ptyHost --logsPath /home/windows/.vscode-server/data/logs/20231101T101258
+windows   1175  1164  0 10:13 pts/5    00:00:00 /bin/bash --init-file /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+windows   1833  1078  0 10:16 pts/2    00:00:01 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node /home/windows/.vscode-server/extensions/vue.volar-1.8.22/server.js --node-ipc --clientProcessId=1078
+windows   1840  1078  0 10:16 pts/2    00:00:01 /home/windows/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node /home/windows/.vscode-server/extensions/vue.volar-1.8.22/server.js --node-ipc --clientProcessId=1078
+windows   3631  1175  0 10:27 pts/5    00:00:00 ps -ef
