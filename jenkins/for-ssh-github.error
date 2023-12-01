@@ -1,0 +1,8 @@
+Failed to connect to repository : Command "git ls-remote -h -- git@github.com:justgithubaccount/welcome-javascript.git HEAD" returned status code 128:
+stdout:
+stderr: No ED25519 host key is known for github.com and you have requested strict checking.
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
