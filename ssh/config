@@ -1,5 +1,5 @@
-Host me
-    Hostname 127.0.0.1
+Host net-angels-vds
+    Hostname 185.93.109.137
     User root
     IdentityFile ~/.ssh/id_rsa
     VisualHostKey yes

@@ -1,17 +1,25 @@
-# Генерим ключи
-ssh-keygen
+# Генерация ключа
+ssh-keygen -t rsa
 
-# Копируем ключи на нужный хост
-ssh-copy-id root@127.0.0.1
+# Копирование ключа на нужный хост
+ssh-copy-id -i ~/.ssh/rsa-huawei-home.pub root@185.93.109.137
+
+# Подключение к хосту 
+ssh -i ./rsa-huawei-home 'root@185.93.109.137'
+ssh root@185.93.109.137 # Когда приватный ключ называется id_rsa
+
+# Подключение с параметрами из ~/.ssh/config
+ssh net-angels-vds
+
+# Смена разрешений чтобы никто из группы не смог изменить этот файл
+chmod 0644 ~/.ssh/config
+
+# Смена разрешений чтобы был доступ только для владельца
+chmod 0600 ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/id_rsa
 
 # Конфиг файл демона ssh
 nano /etc/ssh/sshd_config
 
 systemctl status sshd
 systemctl restart sshd
-
-# Подключение с параметрами из ~/.ssh/config
-ssh net-angels-vds
-
-# Смена разрешений чтобы никто из группы не смог изменить этот файл
-chmod 644 ~/.ssh/config
