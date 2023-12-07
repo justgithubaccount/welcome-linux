@@ -1,0 +1,2 @@
+pip list
+which python
