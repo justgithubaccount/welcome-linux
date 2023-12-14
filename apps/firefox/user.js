@@ -4,7 +4,7 @@
 // ~/.mozilla/firefox/8isompgz.default-esr
 
 // general
-user_pref("browser.toolbars.bookmarks.visibility", "never");
+user_pref("browser.toolbars.bookmarks.visibility", "newtab");
 user_pref("devtools.cache.disabled", true);
 user_pref("devtools.theme", "dark");
 

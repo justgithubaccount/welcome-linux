@@ -85,11 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
+if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='nano'
-# else
+else
     export EDITOR='nano'
-# fi
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -103,7 +103,21 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# direnv config 
+eval "$(direnv hook zsh)"
+
 # >>>> Vagrant command completion (start)
 fpath=(/usr/share/rubygems-integration/all/gems/vagrant-2.3.4/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/jenya/yandex-cloud/path.bash.inc' ]; then source '/home/jenya/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/jenya/yandex-cloud/completion.zsh.inc' ]; then source '/home/jenya/yandex-cloud/completion.zsh.inc'; fi
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
