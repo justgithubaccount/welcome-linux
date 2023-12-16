@@ -1,12 +1,12 @@
-# Генерация ключа
+# Генерация ключей (private и public)
 ssh-keygen -t rsa
 
-# Копирование ключа на нужный хост
+# Копирование public ключа на нужный хост
 ssh-copy-id -i ~/.ssh/rsa-huawei-home.pub root@185.93.109.137
 
-# Подключение к хосту 
+# Подключение к хосту используя private ключ
 ssh -i ./rsa-huawei-home 'root@185.93.109.137'
-ssh root@185.93.109.137 # Когда приватный ключ называется id_rsa
+ssh root@185.93.109.137 # Когда private ключ называется id_rsa
 
 # Подключение с параметрами из ~/.ssh/config
 ssh net-angels-vds
