@@ -12,3 +12,6 @@ wc -l /etc/passwd
 
 # Поиск "SSL_CRT_FILE" во всех файлах в папке   
 grep -r "SSL_CRT_FILE" ~/github-public/react-telegram-web-app-demo
+
+# Создать 10 файлов
+touch file{01..10}
