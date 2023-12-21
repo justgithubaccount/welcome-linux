@@ -1,0 +1,8 @@
+deb http://mirror.yandex.ru/debian bookworm main
+deb-src http://mirror.yandex.ru/debian bookworm main
+
+deb http://mirror.yandex.ru/debian bookworm-updates main
+deb-src http://mirror.yandex.ru/debian bookworm-updates main
+
+deb https://mirror.yandex.ru/debian-security bookworm-security main
+deb-src https://mirror.yandex.ru/debian-security bookworm-security main

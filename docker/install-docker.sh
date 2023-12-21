@@ -1,5 +1,4 @@
-# Add your user to the kvm group in order to access the kvm device
-sudo usermod -aG kvm $USER
+# https://docs.docker.com/engine/install/debian/
 
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -15,7 +14,12 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
+# Install the latest version
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
 # docker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: 
 # Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
 usermod -a -G docker jenkins
 systemctl restart jenkins
+
+usermod -aG docker $USER
