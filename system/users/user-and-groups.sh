@@ -11,19 +11,19 @@ useradd -D # Настройки по умолчанию при создание 
 
 # Создание пользователей
 sudo useradd jeff \
-    -b \/home/amazon/it \
-    -c "CEO - Bezos I" \
-    -g amazon \
-    -G sudo \
-    -u 1111
+-b \/home/amazon/it \
+-c "CEO - Bezos I" \
+-g amazon \
+-G sudo \
+-u 1111
 
 sudo useradd bill \
-    -b \/home/microsoft/it \
-    -c "CEO - Gates I" \
-    -g microsoft \
-    -G sudo \
-    -u 2222 \
-    -s /usr/bin/zsh 
+-b \/home/microsoft/it \
+-c "CEO - Gates I" \
+-g microsoft \
+-G sudo \
+-u 2222 \
+-s /usr/bin/zsh
 
 sudo passwd jeff # После создания необходимо задать пароль пользователю
 chage jeff # Задать настройки пароля для пользователя
@@ -31,7 +31,7 @@ grep jeff /etc/passwd /etc/group # Проверить
 
 sudo usermod -s /usr/bin/zsh jeff # Изменить shell по умолчанию у пользователя
 sudo chsh -s /usr/bin/zsh jeff # Изменить shell (еще один способ)
-sudo usermod bill -d /home/amazon/it/bill -m -aG amazon # Перенести домашнию директорию пользователя и добавить в группу 
+sudo usermod bill -d /home/amazon/it/bill -m -aG amazon # Перенести домашнию директорию пользователя и добавить в группу
 sudo userdel -r bill # Удалить пользователя полностью
 
 # Создание групп
