@@ -1,0 +1,1 @@
+libreoffice --headless --convert-to csv --outdir ./scr-data/ ./scr-data/users-list.xlsx

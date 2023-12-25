@@ -1,5 +1,5 @@
-# Вывод последних 5 строк
-tail -5 /etc/passwd
+tail -5 /etc/passwd # Вывод последних 5 строк
+tail -n +2 /etc/passwd # Вывод с определенной строки
 
 # Вывод первых 5 строк
 head -5 /etc/passwd
@@ -8,13 +8,13 @@ head -5 /etc/passwd
 cat > file1.txt
 
 # Быстрый просмотр файла
-cat /etc/passwd 
+cat /etc/passwd
 
 # Кол-во строк в файле
 wc -l /etc/passwd
 
-# Поиск "SSL_CRT_FILE" во всех файлах в папке   
-grep -r "SSL_CRT_FILE" ~/github-public/react-telegram-web-app-demo
+grep -r "SSL_CRT_FILE" ~/github-public/react-telegram-web-app-demo # Поиск "SSL_CRT_FILE" во всех файлах в папке
+grep -w amazon /etc/group # Точное вхождение
 
 # Создать 10 файлов
 touch file{01..10}
