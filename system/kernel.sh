@@ -1,13 +1,51 @@
+# Просмотр версии ядра
 uname -r 
+
+# Посмотреть сколько весит
 du -h /boot/vmlinuz-*
+
+# Список модулей
 ls /lib/modules
-cd /lib/modules/$(uname -r)
-cat /lib/modules/$(uname -r)/modules.built
-less modules.alias
+
+# Cписок модулей для текущего ядра
+cd /lib/modules/$(uname -r) && ls
+
+# Инфа о модуле
 modinfo radeon | less
+
+# Виртуальная файловая система - sysfs ()
+# Cтруктурированная информация об устройствах и драйверах
+ls /sys
+ls /sys/bus/pci/devices/00*
+
+# Инфа о проце
 lscpu
+
+# Инфа о девайсах подключеных в шину PCI
 lspci
+
+# Инфа о том что подключенно к USB
 lsusb
-lsmod
+
+# Более подробная инфа обо всем
 sudo lshw
+
+# Глянуть через Гуй
+hardinfo
+
+# Узнать что происходит в ядре при запуске системы или прямо в моменте
 sudo dmesg -wH
+
+# Загруженные ядром модули 
+lsmod
+
+# Загрузить модуль radeon
+sudo modprobe radeon
+
+# Выгрузить модуль radeon
+sudo modprobe -r radeon
+
+# udev – отвечает за управление устройствами
+# Когда ядро видит новое устройство, оно создаёт событие, которое отслеживает udev
+# Список правил udev
+ls /usr/lib/udev/rules.d/
