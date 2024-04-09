@@ -1,1 +1,0 @@
-sudo ln -s ~/Applications/Outline-Client.AppImage /usr/bin/outline-client

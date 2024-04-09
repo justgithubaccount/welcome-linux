@@ -18,3 +18,10 @@ grep -w amazon /etc/group # Точное вхождение
 
 # Создать 10 файлов
 touch file{01..10}
+
+# Поиск файла
+find / -name zabbix.conf.php
+
+# Скопировать файл на сервер
+# https://unix.stackexchange.com/questions/188285/how-to-copy-a-file-from-a-remote-server-to-a-local-machine
+scp ~/Downloads/gpg.key root@192.168.0.10:/home
