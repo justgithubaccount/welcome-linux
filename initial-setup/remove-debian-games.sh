@@ -1,4 +1,4 @@
-sudo apt \
+sudo apt remove \
     purge \
     iagno \
     lightsoff \

@@ -1,0 +1,44 @@
+version: '3'
+services:
+  # MongoDB
+  mongo:
+    image: mongo:6.0
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - graylog-net
+
+  # Elasticsearch
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - graylog-net
+
+  # Graylog
+  graylog:
+    image: graylog/graylog:5.2
+    environment:
+      - GRAYLOG_HTTP_EXTERNAL_URI=http://127.0.0.1:9000/
+      - GRAYLOG_ROOT_PASSWORD=Qq123456Qq123456Qq123456
+      - GRAYLOG_PASSWORD_SECRET=Aa123456Aa123456Aa123456
+    ports:
+      - "9000:9000"
+      - "12201:12201/udp"
+      - "1514:1514"
+    depends_on:
+      - mongo
+      - elasticsearch
+    networks:
+      - graylog-net
+
+networks:
+  graylog-net:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+  elasticsearch_data:

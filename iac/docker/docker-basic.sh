@@ -23,4 +23,6 @@ docker start 209ffbc65c39 # Запустить контейнер (после т
 docker tag site-just-text:v1 site-just-text:v2 # Копировать образ
 
 docker exec -it 4b4f0c002bba /bin/bash # Зайти в контейнер
-docker commit 4b4f0c002bba site-just-text:v3 # Сохранить состояние контейнера в новый образ
+docker commit 4b4f0c002bba site-just-text:v3 # Сохранить состояние контейнера в новый 
+
+docker system prune # Удалить все неиспользуемые данные, включая неактивные контейнеры, образы, сети и тома
