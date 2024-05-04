@@ -1,9 +1,22 @@
-wget https://download-cdn.jetbrains.com/python/pycharm-community-2023.3.1.tar.gz
+wget https://download-cdn.jetbrains.com/python/pycharm-community-2024.1.1.tar.gz -P ~/downloads
 
-tar -xf ~/Downloads/pycharm-community-2023.3.1.tar.gz
+tar -xf ~/downloads/pycharm-community-2024.1.1.tar.gz
 
-# ./Applications/pycharm-community-2023.3.1/bin/pycharm.sh  
+mv ~/downloads/pycharm-community-2024.1.1 ~/downloads/pycharm-community-2024
 
-mv jetbrains-pycharm.desktop ~/.local/share/applications/jetbrains-pycharm.desktop
+mv ~/downloads/pycharm-community-2024 ~/apps 
+
+cat > ~/.local/share/applications/jetbrains-pycharm.desktop <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PyCharm
+Icon=/home/jenya/apps/pycharm-community-2024/bin/pycharm.png
+Exec="/home/jenya/apps/pycharm-community-2024/bin/pycharm.sh" %f
+Comment=The Drive to Develop
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-pycharm-ce
+EOF
 
 chmod +x ~/.local/share/applications/jetbrains-pycharm.desktop

@@ -2,8 +2,8 @@
 Version=1.0
 Type=Application
 Name=PyCharm
-Icon=/home/jenya/Applications/pycharm-community-2023.3.1/bin/pycharm.png
-Exec="/home/jenya/Applications/pycharm-community-2023.3.1/bin/pycharm.sh" %f
+Icon=/home/jenya/apps/pycharm-community-2024/bin/pycharm.png
+Exec="/home/jenya/apps/pycharm-community-2024/bin/pycharm.sh" %f
 Comment=The Drive to Develop
 Categories=Development;IDE;
 Terminal=false
