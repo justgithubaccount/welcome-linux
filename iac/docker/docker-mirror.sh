@@ -1,0 +1,1 @@
+sudo sh -c 'echo "{"registry-mirrors": ["https://mirror.gcr.io"]}" >> /etc/docker/daemon.json'
