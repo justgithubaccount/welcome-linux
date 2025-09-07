@@ -1,0 +1,19 @@
+# 1) Ensure tools
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+
+# 2) Keyring directory
+sudo install -m 0755 -d /etc/apt/keyrings
+
+# 3) Put Yarn’s GPG key into a keyring file (no apt-key)
+curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/yarn.gpg
+sudo chmod a+r /etc/apt/keyrings/yarn.gpg
+
+# 4) Add the APT source with signed-by
+echo "deb [signed-by=/etc/apt/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian/ stable main" \
+  | sudo tee /etc/apt/sources.list.d/yarn.list > /dev/null
+
+# 5) Install
+sudo apt-get update
+sudo apt-get install -y yarn
