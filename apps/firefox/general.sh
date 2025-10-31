@@ -1,0 +1,1 @@
+cp apps/firefox/user.js /home/jenya/.mozilla/firefox/u17hnvmg.default-esr/user.js
